@@ -32,7 +32,7 @@ Configuration Command Modes
 ---------------------------
 
 To configure a device, the user must enter the global configuration mode. Global conf mode is identified by the `(config)#` at the prompt.  
-Example: `Switch(config)#`. To return to Privileged Exec Mode enter `end` or use `CTRL + Z` command.
+Example: `Switch(config)#`. To return to Privileged Exec Mode enter `end` or use `CTRL + Z` shortcut.
 
 The user can switch to different subconfiguration modes. These include:
 * Line Configuration Mode
@@ -129,6 +129,11 @@ Router> enable
 Router#
 Router# show running-config
 ```
+```
+Router> enable
+Router#
+Router# show startup-config
+```
 
 __Save__
 ```
@@ -136,6 +141,22 @@ Router> enable
 Router#
 Router# copy running-config startup-config
 ```
+
+If, for whatever reason, you end up with an undesired config state, you can always use the `reload` command. But be aware that this command shuts the device off briefly, disabling its network capabilities.
+The same is the case with the `erase startup-config` command. But the erase command will delete every configuration you did, like passwords, hostnames or motd's.
+
+In case you f'd up but havent saved yet, you can overwrite the existing config with the startup config. Just run:
+```
+Router> enable
+Router#
+Router# copy startup-config running-config
+```
+
+### TODO
+Addressing Schemes
+==================
+
+
 
 
 
