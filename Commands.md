@@ -110,8 +110,8 @@ Router(config)# exit
 ```
 
 
-Check Banner / Message of the Day / MotD
-----------------------------------------
+Change Banner / Message of the Day / MotD
+-------------------
 
 ```
 Router> enable
@@ -152,14 +152,40 @@ Router#
 Router# copy startup-config running-config
 ```
 
-### TODO
+
 Addressing Schemes
 ==================
 
+So you want to check the IP address of your computer in your network?
+
+Windows: `ipconfig`
+Linux: `ip a`
 
 
+Switch Virtual Interface (SVI) Configuration
+-----------------------------
+
+A Switch does not need an IP address to work properly. It still comes in handy to assign an IP address to the Switch for remote configuration.
+This is how to do it:
+
+```
+Switch> en
+Switch# conf t
+Switch(config)# intercace vlan 1
+Switch(config-if)# ip add 192.168.51.104 255.255.255.0
+Switch(config-if)# no shutdown
+```
+
+Interface Address Verification
+------------
+
+Like `ipconfig` / `ip a` commands on a client, you can verify IP addresses on a switch or a router.
+
+```
+Switch> en
+Switch# show ip interface brief
+```
 
 
-
-
+### TODO - Chapter 3 - Network Protocols and Communications
 
