@@ -220,19 +220,19 @@ TCP/IP Protocol Suite
 The TCP/IP Protocol Suite includes many protocols. 
 * Applictaion Layer
 	- Name System
-		. BOOTP
+		* BOOTP
 	- Host Config
-		. BOOTP
-		. DHCP
+		* BOOTP
+		* DHCP
 	- Email
-		. SMTP
-		. POP
-		. IMAP
+		* SMTP
+		* POP
+		* IMAP
 	- File Transfer
-		. FTP
-		. TFTP
+		* FTP
+		* TFTP
 	- Web
-		. HTTP
+		* HTTP
 
 
 
