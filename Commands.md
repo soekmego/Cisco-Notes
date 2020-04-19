@@ -187,5 +187,92 @@ Switch# show ip interface brief
 ```
 
 
-### TODO - Chapter 3 - Network Protocols and Communications
+Chapter 3 - Network Protocols and Communications
+===========
+
+Rule Establishment for Protocols
+--------
+
+* An identified sender and receiver
+* Common language and grammar
+* Speed and timing of delivery
+* Confirmation or acknowledgement requirements
+
+__Network communication protocols share these traits__
+
+* Message encoding
+* Message Formatting and Encapsulation
+* Message size
+* Message Timing
+* Mesage Delivery Options
+
+Protocol Interaction
+------
+
+__HTTP:__ Application protocol that governs the way a webserver and a webclient interact. HTTP relies on other protocols to govern how the messages are transported between the client and the server.
+__TCP:__ The transport protocol that manages the individual converstaions. TCP divides the HTTP messages into smaller pieces. (Segments) TCP is also responsible for controlling the size and rate at which mesages are exchanged between the server and clients.
+__IP:__ Takes formatted TCP segments, encapsulates them into packets, assignes the appropiate IP and delivers them to the destination.
+__Ethernet:__ Communication over Data Link and physical transmission on the network media. Network Access protocols take the packets from IP and formats them to be transmitted over the media.
+
+
+TCP/IP Protocol Suite
+------
+The TCP/IP Protocol Suite includes many protocols. 
+* Applictaion Layer
+	- Name System
+		. BOOTP
+	- Host Config
+		. BOOTP
+		. DHCP
+	- Email
+		. SMTP
+		. POP
+		. IMAP
+	- File Transfer
+		. FTP
+		. TFTP
+	- Web
+		. HTTP
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
