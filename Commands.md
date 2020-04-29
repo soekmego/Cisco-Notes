@@ -209,10 +209,10 @@ __Network communication protocols share these traits__
 Protocol Interaction
 ------
 
-__HTTP:__ Application protocol that governs the way a webserver and a webclient interact. HTTP relies on other protocols to govern how the messages are transported between the client and the server.
-__TCP:__ The transport protocol that manages the individual converstaions. TCP divides the HTTP messages into smaller pieces. (Segments) TCP is also responsible for controlling the size and rate at which mesages are exchanged between the server and clients.
-__IP:__ Takes formatted TCP segments, encapsulates them into packets, assignes the appropiate IP and delivers them to the destination.
-__Ethernet:__ Communication over Data Link and physical transmission on the network media. Network Access protocols take the packets from IP and formats them to be transmitted over the media.
+* __HTTP:__ Application protocol that governs the way a webserver and a webclient interact. HTTP relies on other protocols to govern how the messages are transported between the client and the server.
+* __TCP:__ The transport protocol that manages the individual converstaions. TCP divides the HTTP messages into smaller pieces. (Segments) TCP is also responsible for controlling the size and rate at which mesages are exchanged between the server and clients.
+* __IP:__ Takes formatted TCP segments, encapsulates them into packets, assignes the appropiate IP and delivers them to the destination.
+* __Ethernet:__ Communication over Data Link and physical transmission on the network media. Network Access protocols take the packets from IP and formats them to be transmitted over the media.
 
 
 TCP/IP Protocol Suite
@@ -220,70 +220,54 @@ TCP/IP Protocol Suite
 The TCP/IP Protocol Suite includes many protocols. 
 * Applictaion Layer
 	- Name System
-		* BOOTP
+		* DNS - Domain Name System
 	- Host Config
-		* BOOTP
-		* DHCP
+		* BOOTP - Bootstrap Protocol
+		* DHCP - Dynamic Host Configuration Protocol
 	- Email
-		* SMTP
-		* POP
-		* IMAP
+		* SMTP - Simple Mail Transfer Protocol
+		* POP - Post Office Protocol
+		* IMAP - Internet Message Access Protocol
 	- File Transfer
-		* FTP
-		* TFTP
+		* FTP - File Transfer Protocol
+		* TFTP - Trivial File Transfer Protocol
 	- Web
-		* HTTP
+		* HTTP - Hypertext Transfer Protocol
 * Transport Layer
-	- UDP
-	- TCP
+	- UDP - User Datagram Protocol
+	- TCP - Transmission Control Protocol
 * Internet Layer
-	- IP
-	- NAT
+	- IP - Internet Protocol
+	- NAT - Network Address Translation
 	- IP Support
-		* ICMP
+		* ICMP - Internet Control Message Protocol
 	- Routing Protocols
-		* OSPF
-		* EIGRP
+		* OSPF - Open Shortest Path First
+		* EIGRP - Enhanced Interior Gateway Routing Protocol
 * Network Access Layer
-	- ARP
-	- PPP
+	- ARP - Address Resolution Protocol
+	- PPP - Point to Point Protocol
 	- Ethernet
 	- Interface Drivers
 
+TCP/IP Communication Process
+-----
+1. Webserver prepares the HTML page to be sent
+2. A header is added to the HTML data which contains various information like the HTTP version and the status code
+3. The application protocol delivers the data to the transport layer
+4. The IP information is added to the front of the TCP information. IP assigns the source and destination address. This is known as an IP packet.
+5. The Ethernet protocoll adds information on both ends, creating a data link frame. This frame is delivered to the nearest router along the path towards the web client. This router removes the Ethernet information, analyzes the IP packet, determines the best path for the packet, inserts the packet into a new frame, and sends it to the next neighboring router towards the destination. Each router removes and adds new data link information before forwarding the packet.
+6. This data is now transported through the internetwork, which consists of media and intermediary devices.
 
 
+The OSI Reference Model
+----
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+|: Layer :|: Description|
+|:-------:|:------------|
+| Application | Contains protocols used for process to process communications |
+| Presentation | Provides for common representation of the data transferred between application layer services |
+| Session | Provides services to the presentation layer to organize its dialogue and to manage data exchange |
 
 
 
