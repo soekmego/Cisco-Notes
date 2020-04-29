@@ -285,3 +285,30 @@ The TC/IP Model
 | Transport | Supports communications between various devices across diverse networks |
 | Internet | Determines the best path through the network |
 | Network Access | Controls the hardware devices and media that make up the network |
+
+
+Data Encapsulation and Message Segmentation
+-----
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
