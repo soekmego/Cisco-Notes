@@ -276,3 +276,12 @@ The OSI Reference Model
 
 
 
+The TC/IP Model
+----- 
+
+| Name | Description |
+|:----:|:----|
+| Applictaion | Represents data to the user, plus encoding and dialog control |
+| Transport | Supports communications between various devices across diverse networks |
+| Internet | Determines the best path through the network |
+| Network Access | Controls the hardware devices and media that make up the network |
